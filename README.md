@@ -11,9 +11,16 @@ Tested on Ubuntu 16.04, ROS Kinetic, Boost 1.58
 1. Clone the package to the src folder
 2. `catkin_make` and source `devel/setup.bash`
 
+## Dependencies
+  We need `libignition-math2-dev` and `protobuf-compiler` to compile the map creator:
+  `sudo apt-get install libignition-math2-dev protobuf-compiler`
+
+
 ### Add the map and insert the plugin
+
 1. Add your world file to world folder
 2. Add this line at the end of the world file, before `</world>` tag:
+
 `<plugin filename="libcollision_map_creator.so" name="collision_map_creator"/>`
 
 ### Create the pgm map file
